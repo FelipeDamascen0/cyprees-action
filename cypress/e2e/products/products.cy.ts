@@ -4,7 +4,6 @@ describe('Inventory', () => {
     beforeEach(() => {
         cy.visit("https://www.saucedemo.com/");
         cy.login();
-        inventory.verificarUrl();
     });
 
     it('Adicionar item ao carrinho', () => {
