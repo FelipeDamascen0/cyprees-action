@@ -1,6 +1,6 @@
 class Invetory{
     verificarUrl(){
-        cy.url().should("eq", "https://www.saucedemo.com/inventory.html")
+        cy.url().should("eq", "https://www.saucedemo.com/inventory.html");
     }
 
     adicionaItemAoCarrinho(nameItem: string){
