@@ -7,7 +7,7 @@ describe('Login', () => {
   });
 
   it('Relizar login com credenciais validas', () => {
-    login.preencherCredenciais(Cypress.env('username'), Cypress.env('password'))
+    login.preencherCredenciais('standard_user', 'secret_sauce')
     invetory.verificarUrl();
   });
 
