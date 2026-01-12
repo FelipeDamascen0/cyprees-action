@@ -1,7 +1,5 @@
 name: Cypress Tests
-
 on: push
-
 jobs:
   cypress-run:
     runs-on: ubuntu-24.04
@@ -9,15 +7,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         env:
-        CYPRESS_username: ${{ secrets.USER }}
-        CYPRESS_password: ${{ secrets.PASSWORD }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASSWORD }}
       - name: Cypress run
         uses: cypress-io/github-action@v6
       - uses: actions/download-artifact@v4
         with:
           name: cypress-reports
           path: cypress/reports
-          if-no-files-found: ignore
       - uses: actions/upload-artifact@v4
         with:
           name: cypress-videos
