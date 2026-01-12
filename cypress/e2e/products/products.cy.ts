@@ -4,10 +4,10 @@ describe('Inventory', () => {
     beforeEach(() => {
         cy.visit("https://www.saucedemo.com/");
         cy.login();
+        inventory.verificarUrl();
     });
 
     it('Adicionar item ao carrinho', () => {
-        inventory.verificarUrl();
         inventory.adicionaItemAoCarrinho("sauce-labs-backpack");
         inventory.varificaQuantidadeDeItemsNoCarrinho("1");
         inventory.verificaItemDoCarrinho();
